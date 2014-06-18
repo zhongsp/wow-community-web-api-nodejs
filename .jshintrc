@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "require": false,
+    "exports": false,
+    "module": false,
+    "console": false
+  },
+  "curly": true,
+  "indent": 2,
+  "quotmark": "single",
+  "maxlen": 80
+}
