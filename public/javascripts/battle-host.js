@@ -3,11 +3,11 @@
  */
 
 var regionToHost = {
-  'china':  'www.battlenet.com.cn',
+  'china' : 'www.battlenet.com.cn',
   'taiwan': 'tw.battle.net',
-  'us':     'us.battle.net',
+  'us'    : 'us.battle.net',
   'europe': 'eu.battle.net',
-  'korea':  'kr.battle.net'
+  'korea' : 'kr.battle.net'
 };
 var localeToHost = {
   'zh_cn': 'www.battlenet.com.cn',
