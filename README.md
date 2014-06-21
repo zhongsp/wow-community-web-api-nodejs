@@ -16,3 +16,7 @@ Start the server:
 ```bash
 $ npm start
 ```
+
+## Access in browsers
+
+:link:  <http://localhost:3000/>
