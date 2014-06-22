@@ -39,7 +39,7 @@ http://localhost:3000/achievements/2936?locale=zh_CN
 Response sample(json):
 
 ```javascript
-// GET /achievements/5828?locale=zh_CN HTTP/1.1
+// GET /achievements/2936?locale=zh_CN HTTP/1.1
 {
   "id": 2936,
   "title": "削弱重力炸弹（25人）",
