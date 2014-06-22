@@ -2,33 +2,45 @@
  * Battle.net hosts list
  */
 
+var host = {
+  'cn': 'www.battlenet.com.cn',
+  'tw': 'tw.battle.net',
+  'us': 'us.battle.net',
+  'eu': 'eu.battle.net',
+  'kr': 'eu.battle.net'
+};
+
 var regionToHost = {
-  'china' : 'www.battlenet.com.cn',
-  'taiwan': 'tw.battle.net',
-  'us'    : 'us.battle.net',
-  'europe': 'eu.battle.net',
-  'korea' : 'kr.battle.net'
+  'china' : host.cn,
+  'taiwan': host.tw,
+  'us'    : host.us,
+  'europe': host.eu,
+  'korea' : host.kr
 };
 var localeToHost = {
-  'zh_cn': 'www.battlenet.com.cn',
-  'zh_tw': 'tw.battle.net',
-  'en_us': 'us.battle.net',
-  'es_mx': 'us.battle.net',
-  'pt_br': 'us.battle.net',
-  'en_gb': 'eu.battle.net',
-  'es_es': 'eu.battle.net',
-  'fr_fr': 'eu.battle.net',
-  'ru_ru': 'eu.battle.net',
-  'de_de': 'eu.battle.net',
-  'pt_pt': 'eu.battle.net',
-  'it_it': 'eu.battle.net',
-  'ko_kr': 'eu.battle.net'
+  'zh_cn': host.cn,
+  'zh_tw': host.tw,
+  'en_us': host.us,
+  'es_mx': host.us,
+  'pt_br': host.us,
+  'en_gb': host.eu,
+  'es_es': host.eu,
+  'fr_fr': host.eu,
+  'ru_ru': host.eu,
+  'de_de': host.eu,
+  'pt_pt': host.eu,
+  'it_it': host.eu,
+  'ko_kr': host.kr
 };
 
 exports.getHostByRegion = function(region) {
+  region = region.toLowerCase();
+
   return regionToHost[region] ? regionToHost[region] : '';
 };
 
 exports.getHostByLocale = function(locale) {
+  locale = locale.toLowerCase();
+
   return localeToHost[locale] ? localeToHost[locale] : '';
 };
