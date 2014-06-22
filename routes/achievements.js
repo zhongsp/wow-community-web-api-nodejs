@@ -1,5 +1,5 @@
 /**
- * Router: '/achievements/2144?locale=zh_CN'
+ * Router: 'http://localhost:3000/achievements'
  */
 
 var express = require('express');
@@ -11,9 +11,11 @@ router.get('/:achievementID', function(req, res) {
   var locale = req.query.locale || 'zh_CN';
 
   achievement.getAchievementDataByLocale(req.params.achievementID, locale)
-    .then(function(json) {
-      res.writeHead(200, {'Content-Type': 'application/json'});
-      res.end(json);
+    .then(function(achievementJson) {
+      res.set('Content-Type', 'application/json');
+      res.send(achievementJson);
+    }, function(error) {
+      console.log(error);
     });
 });
 
