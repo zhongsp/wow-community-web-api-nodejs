@@ -1,5 +1,9 @@
 ﻿var wowwebapi = require('../');
 
-wowwebapi.auction.getAuctionDataByRegionRealm('', 'medivh').then(function (data) {
+wowwebapi.auction.getAuctionDataFileByRegionRealm('', 'medivh').then(function (data) {
   console.log(data);
 });
+
+//wowwebapi.auction.getAuctionDataByRegionRealm('', 'medivh').then(function (data) {
+//  console.log(data);
+//});
