@@ -8,5 +8,5 @@
   "curly": true,
   "indent": 2,
   "quotmark": "single",
-  "maxlen": 80
+  "maxlen": 100
 }

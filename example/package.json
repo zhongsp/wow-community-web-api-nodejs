@@ -1,18 +1,9 @@
 {
-  "name": "wow-web-api",
+  "name": "wow-web-api-example",
   "version": "0.0.1",
-  "description": "WoW Community Web API written in NodeJS",
-  "repository": "https://github.com/zhongsp/wow-community-web-api-nodejs.git",
   "scripts": {
     "start": "node ./example/bin/www"
   },
-  "keywords": [
-    "WoW",
-    "WOW",
-    "API",
-    "Community API",
-    "WoW Community Web API"
-  ],
   "dependencies": {
     "express": "~4.2.0",
     "static-favicon": "~1.0.0",

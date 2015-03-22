@@ -17,6 +17,7 @@ var regionToHost = {
   'europe': host.eu,
   'korea' : host.kr
 };
+
 var localeToHost = {
   'zh_cn': host.cn,
   'zh_tw': host.tw,
