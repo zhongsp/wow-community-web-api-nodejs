@@ -1,5 +1,5 @@
 var wowwebapi = require('../');
 
-wowwebapi.achievement.getAchievementDataByLocale('2936', 'zh_CN').then(function (data) {
-  console.log(data);
+wowwebapi.achievement.getAchievementDataByLocale('zh_CN', '2936').then(function (data) {
+  console.log('\n\n' + data + '\n\n');
 });
