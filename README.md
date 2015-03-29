@@ -7,19 +7,12 @@ WoW Community Web API written in Nodejs
 
 ### Achievement API
 
-#### achievement#getAchievementDataByLocale
+#### achievement#getAchievementDataByLocale(locale, achievementId)
 
 This provides data about an individual achievement. Example:
 
 ```js
-/**
- * @name achievement#getAchievementDataByLocale
- * @param achievementID {Number} Achievement id.
- * @param locale {String} See `./lib/region-host`.
- * @returns promise {Promise} Resolved by achievement data.
- */
-
-wowwebapi.achievement.getAchievementDataByLocale('2936', 'zh_CN').then(function(data) {
+wowwebapi.achievement.getAchievementDataByLocale('zh_CN', '2936').then(function(data) {
   //{
   //  "id": 2936,
   //  "title": "削弱重力炸弹（25人）",
@@ -37,18 +30,11 @@ wowwebapi.achievement.getAchievementDataByLocale('2936', 'zh_CN').then(function(
 
 ### Auction API
 
-#### auction#getAuctionDataFileByRegionRealm
+#### auction#getAuctionDataFileByRegionRealm(region, realm)
 
 This API resource provides a per-realm list of recently generated auction house data dumps. Example:
 
 ```js
-/**
- * @name auction#getAuctionDataFileByRegionRealm
- * @param region {String} Region name. See `battle`.
- * @param realm {String} Realm name. See realm status api.
- * @returns promise {Promise} Resolved by auction data.
- */
-
 wowwebapi.auction.getAuctionDataFileByRegionRealm('', 'medivh').then(function(data) {
   // {
   //   "files": [{
@@ -60,21 +46,22 @@ wowwebapi.auction.getAuctionDataFileByRegionRealm('', 'medivh').then(function(da
 });
 ```
 
-#### auction#getAuctionDataByRegionRealm
+#### auction#getAuctionDataByRegionRealm(region, realm)
 
 This API has the same params with `auction#getAuctionDataFileByRegionRealm`. It will continue to 
 fetch the json file contents. Example:
 
 ```js
-/**
- * @name auction#getAuctionDataFileByRegionRealm
- * @param region {String} Region name. See `battle`.
- * @param realm {String} Realm name. See realm status api.
- * @returns promise {Promise} Resolved by auction data.
- */
-
 wowwebapi.auction.getAuctionDataByRegionRealm('', 'medivh').then(function(data) {
   // The data size is large
   console.log(JSON.parse(data));
 });
 ```
+
+### BattlePet API
+
+#### wowwebapi.battlepet.getBattlePetAbilities(locale, abilityID)
+
+#### wowwebapi.battlepet.getBattlePetSpecies(locale, speciesID)
+
+#### wowwebapi.battlepet.getBattlePetStats(locale, speciesID, query)
