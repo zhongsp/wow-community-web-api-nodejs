@@ -60,8 +60,8 @@ wowwebapi.auction.getAuctionDataByRegionRealm('', 'medivh').then(function(data) 
 
 ### BattlePet API
 
-#### wowwebapi.battlepet.getBattlePetAbilities(locale, abilityID)
+#### battlepet.getBattlePetAbilities(locale, abilityID)
 
-#### wowwebapi.battlepet.getBattlePetSpecies(locale, speciesID)
+#### battlepet.getBattlePetSpecies(locale, speciesID)
 
-#### wowwebapi.battlepet.getBattlePetStats(locale, speciesID, query)
+#### battlepet.getBattlePetStats(locale, speciesID, query)
